@@ -52,4 +52,11 @@ router.post('/users/signup', async function (req, res) {
 
 });
 
+// Logout
+router.get('/users/logout', function (req, res) {
+    req.logout();
+    res.redirect('/');
+});
+
+
 module.exports = router;

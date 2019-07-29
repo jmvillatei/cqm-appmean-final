@@ -14,14 +14,14 @@ passport.use(new localStrategy({
 
         if (!user) {
             console.log('error USer');
-            return done(null, false, { message: 'User or Password is not correct' });
+            return done(null, false, { message: 'User or Password are not correct' });
         } else {
             console.log(user);
             const match = await user.matchPwd(pwd);
             if (match) {
                 return done(null, user);
             } else {
-                return done(null, false, { message: 'User or Password is not correct' });
+                return done(null, false, { message: 'User or Password are not correct' });
             }
 
         }

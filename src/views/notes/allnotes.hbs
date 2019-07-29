@@ -11,7 +11,8 @@
                 <p>{{description}}</p>
                 <form action="/notes/deletenote/{{_id}}?_method=DELETE" method="POST">
                     <input type="hidden" name="_method" value="DELETE">
-                    <button class="btn btn-danger btn-block btn-sm" type="submit">Delete <i class='fas fa-trash-alt'></i></button>
+                    <button class="btn btn-danger btn-block btn-sm" type="submit">Delete <i
+                            class='fas fa-trash-alt'></i></button>
                 </form>
             </div>
         </div>
@@ -19,6 +20,9 @@
     {{else}}
     <div class="card mx-auto">
         <div class="card-body">
+
+            Your username is <b>{{user.username}}</b>
+
             <p class="lead">In this momento not exit notes</p>
             <a href="/notes/add" class="btn btn-success btn-block">Create One Now!</a>
         </div>
